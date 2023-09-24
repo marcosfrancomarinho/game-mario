@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../image/tijolos.jpg);
+    background-size: 100px;
+    background-color: black;
+}
+section {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    margin-top: 40px;
+    overflow: hidden;
+    background: linear-gradient(rgb(13, 98, 143), white);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+.pipe {
+    width: 50px;
+    position: absolute;
+    bottom: -5px;
+    left: 60px;
+    display: none;
+}
+
+.pipe-flow {
+    animation: pipe-animation 3s infinite linear;
+}
+
+.pipe img {
+    width: 100%;
+}
+
+.pipe-flow-hard {
+    animation: pipe-animation 1.3s infinite linear;
+}
+
+@keyframes pipe-animation-hard {
+    to {
+        left: -200px;
+    }
+
+    from {
+        left: 900px;
+    }
+}
+
+@keyframes pipe-animation {
+    to {
+        left: -200px;
+    }
+
+    from {
+        left: 900px;
+    }
+}
+
+.mario {
+    width: 80px;
+    position: absolute;
+    bottom: -4px;
+    display: none;
+}
+
+.mario-img {
+    width: 100%;
+}
+
+.jump {
+    animation: mario-jump 1s infinite linear;
+}
+
+@keyframes mario-jump {
+    0% {
+        bottom: -4px;
+    }
+
+    20% {
+        bottom: 60px;
+    }
+
+    50% {
+        bottom: 100px;
+    }
+
+    70% {
+        border-bottom: 60px;
+    }
+
+    100% {
+        bottom: -4px;
+    }
+
+}
+
+.mario-dead {
+    width: 50px;
+}
+
+.msg {
+    background-color: #ffffffbb;
+    position: absolute;
+    bottom: 80px;
+    left: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 3px;
+    opacity: 0;
+    transition: 6s all;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+.ball1 {
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-radius: 50%;
+    background-color: #ffffffbb;
+    position: absolute;
+    bottom: 70px;
+    left: 45px;
+    opacity: 0;
+    transition: 6s all;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+.ball2 {
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-radius: 50%;
+    background-color: #ffffffbb;
+    position: absolute;
+    bottom: 80px;
+    left: 45px;
+    opacity: 0;
+    transition: 6s all;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+.cloudI {
+    margin-top: 15px;
+    width: 200px;
+    display: inline-block;
+    position: absolute;
+    animation: cloudsI-animation 5s infinite linear;
+}
+
+.cloudI img {
+    width: 100%;
+}
+
+.cloudII {
+    margin-top: 15px;
+    width: 200px;
+    display: inline-block;
+    position: absolute;
+    animation: cloudsII-animation 3s infinite linear;
+}
+
+.cloudII img {
+    width: 100%;
+}
+
+@keyframes cloudsI-animation {
+    to {
+        left: -200px;
+    }
+
+    from {
+        left: 800px;
+    }
+}
+
+@keyframes cloudsII-animation {
+    to {
+        left: -100px;
+    }
+
+    from {
+        left: 800px;
+    }
+}
+
+.start {
+    width: 250px;
+    background-color: red;
+    position: absolute;
+    top: 200px;
+    left: 260px;
+    text-align: center;
+    font-size: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px 1px black;
+    font-family: 'VT323', monospace;
+    font-weight: 900;
+    text-shadow: 1px 1px 1px white;
+    color: white;
+    transition: 1s all;
+}
+
+.start:hover {
+    background-color: orangered;
+}
+
+.canvas {
+    background-image: url(../image/canvas.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 800px;
+    height: 500px;
+}
+
+.space {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'VT323', monospace;
+    color: white;
+    animation: poup 0.5s infinite;
+}
+
+@keyframes poup {
+    to {
+        opacity: 1;
+    }
+
+    from {
+        opacity: 0;
+    }
+}
+
+.reload {
+    background-color: white;
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px white;
+    cursor: pointer;
+    border-radius: 100%;
+    display: none;
+}
+
+.reload img {
+    width: 100%;
+    border-radius: 100%;
+}
+
+.game-over {
+    position: absolute;
+    top: 160px;
+    left: 220px;
+    text-align: center;
+    font-size: 100px;
+    font-family: 'VT323', monospace;
+    font-weight: 900;
+    animation: end-game 1s infinite;
+    color: red;
+    text-shadow: 2px 2px black;
+    display: none;
+}
+
+@keyframes end-game {
+    to {
+        opacity: 1;
+    }
+    from {
+        opacity: 0;
+    }
+    
+}
