@@ -8,7 +8,7 @@ document.querySelectorAll(".reload")[0].addEventListener("click", () => {
 });
 start.addEventListener("click", () => {
     displays();
-    document.querySelector(".jump-audio").children[0].setAttribute("src", "./asset/audio/jump.wav");
+    document.querySelector(".jump-audio").setAttribute("src", "./asset/audio/jump.wav");
     functionScore();
     hard();
     gameover();
