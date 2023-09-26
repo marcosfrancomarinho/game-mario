@@ -26,7 +26,7 @@ let jump = (key) => {
         audioJump();
         setTimeout(() => {
             mario.classList.remove("jump");
-        }, 800);
+        }, 1000);
     };
 };
 function audioJump() {
